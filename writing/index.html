@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Writing by Jacob Krushel - Thoughts on business, startups, and strategy.">
+  <title>Writing | Jacob Krushel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">Jacob Krushel</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/about">About</a></li>
+        <li><a href="/consulting">Consulting</a></li>
+        <li><a href="/writing" class="active">Writing</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+      <header class="page-header">
+        <h1 class="page-title">Writing</h1>
+      </header>
+
+      <ul class="posts-list">
+        <li class="post-item">
+          <p class="post-date">July 1, 2020</p>
+          <h2 class="post-title">
+            <a href="/writing/lululemon-mirror-acquisition">Lululemon's Acquisition of Mirror</a>
+          </h2>
+          <p class="post-excerpt">
+            Examining why Lululemon paid $500M for an at-home fitness startup, and what it means for the future of retail and fitness.
+          </p>
+        </li>
+
+        <li class="post-item">
+          <p class="post-date">June 22, 2020</p>
+          <h2 class="post-title">
+            <a href="/writing/is-mba-worth-it">Is an MBA worth it?</a>
+          </h2>
+          <p class="post-excerpt">
+            A personal reflection on the value of business school, the real costs and benefits, and who should (and shouldn't) pursue one.
+          </p>
+        </li>
+
+        <li class="post-item">
+          <p class="post-date">June 15, 2020</p>
+          <h2 class="post-title">
+            <a href="/writing/movie-theaters-covid">Movie Theaters and Covid-19</a>
+          </h2>
+          <p class="post-excerpt">
+            How the pandemic is accelerating changes in movie distribution and what it means for the future of theatrical exhibition.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <ul class="footer-links">
+        <li><a href="https://www.linkedin.com/in/jacobkrushel/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+      <p class="footer-copy">&copy; 2025 Jacob Krushel</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
