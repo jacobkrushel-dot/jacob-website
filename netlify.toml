@@ -5,10 +5,15 @@
 [build.processing]
   skip_processing = false
 
-# Redirect form submissions to success page
+# Redirect for clean URLs
 [[redirects]]
   from = "/contact"
   to = "/contact/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/success"
+  to = "/success/index.html"
   status = 200
 
 # Headers for security and performance
