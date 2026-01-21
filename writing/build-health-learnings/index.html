@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Reflections on co-founding a B2B SaaS company and the lessons learned about whitespace markets, automation, pricing, growth channels, and personal redlines.">
+  <title>I co-founded a B2B SaaS company. Here's what I'd do differently. | Jacob Krushel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Press+Start+2P&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">Jacob Krushel</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/about">About</a></li>
+        <li><a href="/consulting">Consulting</a></li>
+        <li><a href="/writing" class="active">Writing</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+      <article>
+        <header class="post-header">
+          <p class="post-date">January 21, 2026</p>
+          <h1 class="post-title">I co-founded a B2B SaaS company. Here's what I'd do differently.</h1>
+        </header>
+
+        <div class="post-content">
+          <p>
+            This isn't a shutdown story or post-mortem. It's a reflection on decisions that made sense at the time, and what I understand differently now.
+          </p>
+
+          <p>
+            I recently stepped back from the B2B SaaS company I co-founded, Build Health. The business is still operating today, doing roughly $1M in ARR and running profitably.
+          </p>
+
+          <p>
+            Looking back, there are several decisions that made sense at the time, but that I'd approach very differently if I were starting again. I'm writing these down partly for my future self, and partly in case they're useful to anyone else building in messy, real-world conditions.
+          </p>
+
+          <h2>Lesson 1: Avoid conflating a "whitespace" with a long tail.</h2>
+
+          <p>
+            I've always been drawn to overlooked, niche opportunities. That instinct led us to build tools for non-English-speaking SMBs (e.g. nail salons, massage spas), a segment clearly underserved by modern software.
+          </p>
+
+          <p>
+            What I eventually realized is that the "whitespace" we thought we'd found was, in many ways, a long tail of businesses that were slow to adopt existing technologies for structural reasons. The fact that a group isn't served doesn't always mean it should be.
+          </p>
+
+          <p>
+            If I did it again, I would make sure I had an airtight explanation for WHY a perceived whitespace exists. We thought we had this of course, but we learned that our WHY focused on symptoms of the problem rather than the root cause. For example, yes it's true that customer support, onboarding and payment flows, etc. are primarily made for English speakers. But is that WHY these non-English-speaking business owners did not adopt a product? Or did the makers of that product decide (explicitly or implicitly) that these businesses were not viable to support at scale?
+          </p>
+
+          <h2>Lesson 2: If your plan is to do something manual first and automate later, you better be sure you can automate!</h2>
+
+          <p>
+            I strongly subscribe to lean startup thinking: test hypotheses quickly, do things manually if needed, and automate later. In theory, it doesn't matter if something that looks like "software" on the front end is manual on the back end as long as you're learning.
+          </p>
+
+          <p>
+            In practice, this broke down for our customer base.
+          </p>
+
+          <p>
+            We served non-English-speaking SMB owners operating extremely low-margin businesses. Every dollar is important, and they are completely swamped by their day-to-day operations. As such, their record keeping, price lists, policies, online profiles, internal processes etc. are woefully disorganized and/or out of date.
+          </p>
+
+          <p>
+            The result was everything took more effort than expected: onboarding required phone calls, simple documentation such as pricelists or loyalty program policies was difficult to collect and often incoherent, payments were surprisingly complex (many customers preferred cash payments due to trust and familiarity concerns), and customers wanted immediate access to a support rep after even one slow day of business.
+          </p>
+
+          <p>
+            That's okay, we thought. We'll automate all these challenges later. But as we attempted to do this, we ran into customer behavior constraints. Furthermore, we were using platforms such as WeChat to manage our customers, and WeChat (given the Chinese/American software-firewall dynamic) severely limits what an American company can build on top of it.
+          </p>
+
+          <p>
+            If a user base cannot realistically become low-touch, you cannot build a scalable SaaS business for them at modest price points. It seems obvious. If I did it again, I would think about automation constraints much earlier and more aggressively. If something fundamentally cannot be automated, I would either redesign it or not build it at all.
+          </p>
+
+          <h2>Lesson 3: Charge for your product/service ASAP and push prices higher than you think you can.</h2>
+
+          <p>
+            Giving something away for free proves almost nothing.
+          </p>
+
+          <p>
+            We were actually reasonably disciplined here: we only offered our MVP for free briefly, then began charging ($39/month), raised prices multiple times, and eventually landed at $199/month while still acquiring customers. But even so, we unnecessarily delayed revenue and learning by being overly cautious.
+          </p>
+
+          <p>
+            We were afraid customers would say no, or that they'd be unhappy at higher price points. What we learned instead is that pricing is one of the fastest ways to understand how much value you're really providing, and who your real customers are. By far our most time-consuming customers were early users for whom we kept prices artificially low.
+          </p>
+
+          <h2>Lesson 4: Be critical of your growth channels; do not conflate "growth hacks" with durable channels.</h2>
+
+          <p>
+            Once we had something resembling product-market fit, we set aggressive early growth goals to reach profitability and unlock hiring and product investment. That pressure forced us to experiment widely with customer acquisition.
+          </p>
+
+          <p>
+            Some experiments worked, at least temporarily. In-person sales led to WeChat connections, which led to referrals and affiliate-style distribution via WeChat and later Rednote. For a period of time, this drove meaningful growth.
+          </p>
+
+          <p>
+            But in hindsight, many of these were fragile channels, not durable ones. The addressable audience was smaller than we appreciated, and as we scaled the number of affiliates, they began to cannibalize each other. Some early success was driven by unusually strong individual performers whose results were difficult to replicate at scale. When those individuals left, growth became meaningfully harder.
+          </p>
+
+          <p>
+            The lesson wasn't that experimentation was wrong. It was that it is every bit as important to understand how you are going to scale an acquisition channel as it is to validate that it works.
+          </p>
+
+          <h2>Lesson 5: DO NOT lose sight of product experimentation.</h2>
+
+          <p>
+            It's extraordinarily difficult to maintain a relentless focus on product innovation when your product team is consumed by keeping the current system running: fixing bugs, handling bespoke requests, pulling reports, supporting onboarding, and unblocking customers.
+          </p>
+
+          <p>
+            But if you don't make space for continuous discovery — structured feedback loops, proactive experimentation, etc. — you're losing ground to competitors and eliminating any chance at breakout success.
+          </p>
+
+          <p>
+            In hindsight, I would have invested earlier in people and processes whose sole responsibility was learning: testing new ideas, validating assumptions, and pushing the product forward independent of day-to-day firefighting.
+          </p>
+
+          <h2>Lesson 6: Define explicit personal redlines, financially and otherwise.</h2>
+
+          <p>
+            The business became profitable early, but under a very specific set of conditions, one of which is that founders were significantly underpaid.
+          </p>
+
+          <p>
+            That's not inherently wrong. It's part of what many founders sign up for. But I wasn't explicit or quantitative enough with myself about how long that tradeoff was sustainable, or what conditions would force a re-evaluation.
+          </p>
+
+          <p>
+            This connects to a broader lesson about redlines.
+          </p>
+
+          <p>
+            Some startup decisions are easy: when a company runs out of cash, or when it becomes a clear breakout success. Most decisions live in a large, uncomfortable middle where the business is working, but perhaps not working enough to justify the personal and professional costs indefinitely.
+          </p>
+
+          <p>
+            In that middle ground, you're juggling questions like:
+          </p>
+
+          <ul>
+            <li>What is my realistic upside?</li>
+            <li>What opportunity cost am I accepting by staying?</li>
+            <li>Do I have Stockholm syndrome, or am I staying for the right reasons?</li>
+            <li>If I step away, am I a quitter? Do I lack grit?</li>
+            <li>If we make this one change, will the situation improve?</li>
+          </ul>
+
+          <p>
+            Without predefined thresholds, those decisions tend to drag on far longer than they should. Emotion fills the vacuum: fear of being seen as a failure, sunk cost fallacy, fixation on the possibility that one more iteration might change everything.
+          </p>
+
+          <p>
+            If I did this again, I'd define clear personal redlines upfront. Not as an exit plan, but as decision hygiene. Pre-committing to those thresholds wouldn't have made the outcome different, but it would have made the decision clearer, healthier, and far less draining.
+          </p>
+
+          <h2>Conclusion</h2>
+
+          <p>
+            Build is still alive and growing. It's a testament to the team that we could step in so many potholes and still build a profitable, growing business with hundreds of customers who depend on it. Hopefully, if you're reading this, you can learn from my mistakes. And if you'd like to talk through your own challenges and how these lessons might apply to your context, don't hesitate to <a href="/contact">contact me</a>!
+          </p>
+        </div>
+
+        <nav class="post-nav">
+          <a href="/writing">&larr; Back to Writing</a>
+        </nav>
+      </article>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <ul class="footer-links">
+        <li><a href="https://www.linkedin.com/in/jacobkrushel/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+      <p class="footer-copy">&copy; 2026 Jacob Krushel</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
