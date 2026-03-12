@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Link, useLocation } from "wouter";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [location] = useLocation();
 
   useEffect(() => {
@@ -14,6 +16,11 @@ export function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [location]);
 
   const handleAbout = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (location === "/") {
@@ -78,7 +85,63 @@ export function Navbar() {
         >
           Get in Touch
         </a>
+
+        {/* Mobile menu button */}
+        <button
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+          aria-label="Toggle menu"
+        >
+          {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        </button>
       </div>
+
+      {/* Mobile menu dropdown */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.2 }}
+            className="md:hidden overflow-hidden glass-panel border-t border-white/10"
+          >
+            <nav className="flex flex-col px-6 py-4 gap-4">
+              <a
+                href={location === "/" ? "#about" : "/"}
+                onClick={handleAbout}
+                className="text-base font-medium text-muted-foreground hover:text-primary transition-colors tracking-wide uppercase"
+              >
+                About
+              </a>
+              <Link
+                href="/writing"
+                className={cn(
+                  "text-base font-medium transition-colors tracking-wide uppercase",
+                  location === "/writing" ? "text-primary" : "text-muted-foreground hover:text-primary"
+                )}
+              >
+                Writing
+              </Link>
+              <Link
+                href="/consulting"
+                className={cn(
+                  "text-base font-medium transition-colors tracking-wide uppercase",
+                  location === "/consulting" ? "text-primary" : "text-muted-foreground hover:text-primary"
+                )}
+              >
+                Consulting
+              </Link>
+              <a
+                href={location === "/" ? "#contact" : "/"}
+                className="text-base font-medium text-muted-foreground hover:text-primary transition-colors tracking-wide uppercase"
+              >
+                Contact
+              </a>
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.header>
   );
 }
