@@ -1,19 +1,11 @@
 [build]
-  publish = "."
+  command = "npm run build"
+  publish = "dist"
 
-# Form settings
-[build.processing]
-  skip_processing = false
-
-# Redirect for clean URLs
+# SPA redirect - send all routes to index.html
 [[redirects]]
-  from = "/contact"
-  to = "/contact/index.html"
-  status = 200
-
-[[redirects]]
-  from = "/success"
-  to = "/success/index.html"
+  from = "/*"
+  to = "/index.html"
   status = 200
 
 # Headers for security and performance
@@ -26,9 +18,9 @@
 
 # Cache static assets
 [[headers]]
-  for = "/css/*"
+  for = "/assets/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000"
+    Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
   for = "*.woff2"
